@@ -1,0 +1,79 @@
+.medsform {
+  display: none; /* Hidden by default */
+  flex-direction: column;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Center the form */
+  background-image: linear-gradient(150deg, #00F0FF, #00D8E5, #00C0CC, #D323C2);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  max-width: 400px; /* Increased max width */
+  width: 95%; /* Make it fill most of the screen on smaller devices */
+  padding: 30px; 
+  color: #fff;
+  border-radius: 8px;
+}
+
+.medsform h3 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+}
+
+.medsform label {
+  font-size: 14px;
+  margin-bottom: 5px;
+  display: block;
+}
+
+.medsform input {
+  padding: 10px;
+  margin-bottom: 15px;
+  border: none;
+  border-radius: 5px;
+  width: 100%; /* Full width for better responsiveness */
+  box-sizing: border-box;
+}
+
+.medsform button {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  width: 50%; /* Buttons share space */
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+}
+
+.medsform .update-btn {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.medsform .update-btn:hover {
+  background-color: #45a049;
+}
+
+.medsform .close-btn {
+  background-color: #f44336;
+  color: white;
+}
+
+.medsform .close-btn:hover {
+  background-color: #e53935;
+}
+
+.medsform .button-group {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 15px;
+}
+
+
+
+
+
+
+ 

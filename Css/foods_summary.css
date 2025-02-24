@@ -1,0 +1,144 @@
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 10% auto;
+    padding: 20px;
+}
+
+/* Header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.header h1 {
+    font-size: 24px;
+    margin: 0;
+}
+
+
+/* Table Wrapper */
+.table-wrapper {
+    background-color: #fff;
+    border: 2px solid #d6e6a0;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.table-wrapper h2 {
+    color: #D3CC23;
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+/* Search Box */
+.search-box {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 10px;
+}
+
+.search-box label {
+    margin-right: 5px;
+    font-weight: bold;
+}
+
+.search-box input {
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Data Table */
+.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 15px;
+}
+
+.data-table th,
+.data-table td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: left;
+}
+
+.data-table th {
+    background-color: #dbfeae;
+    font-weight: bold;
+}
+
+.data-table tbody tr:nth-child(odd) {
+    background-color: #f9f9f9;
+}
+
+/* Pagination */
+.pagination {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.page-btn {
+    background-color: #00c3ff;
+    border: none;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.page-btn:hover {
+    background-color: #008bb3;
+}
+
+.current-page {
+    margin: 0 10px;
+    font-weight: bold;
+}
+
+/* Back Button */
+.back-btn {
+    background-color: #ff0000;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+}
+
+.back-btn:hover {
+    background-color: #cc0000;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .header h1 {
+        font-size: 20px;
+    }
+
+    .month-navigation .month {
+        font-size: 16px;
+    }
+
+    .table-wrapper {
+        padding: 15px;
+    }
+
+    .data-table th,
+    .data-table td {
+        font-size: 14px;
+    }
+
+    .back-btn {
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+}

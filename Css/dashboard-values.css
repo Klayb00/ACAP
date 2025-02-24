@@ -1,0 +1,78 @@
+.inventory-table {
+    display: flex;
+    justify-content: center; /* Center content */
+    width: 100%;
+    height: 100%;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.inventory-table .visitor-data {
+    flex: 1; /* Full width on small screens */
+    width: 100%;
+    background-color: #ffffff;
+    border-radius: 15px;
+    display: flex;
+    min-height: 550px;
+    flex-direction: column;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+    overflow-x: auto;
+    min-width: 380px;
+}
+.visitor-data table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 10px 0;
+    overflow-x: scroll;
+   
+}
+.inventory-table .visitor-data h3 {
+    font-size: 18px;
+    padding: 10px;
+    background-color: #f8f9fa;
+    box-shadow: 0 2px 4px rgba(108, 108, 108, 0.412);
+    color: #333;
+    text-align: start;
+    margin: 0;
+  
+}
+
+.inventory-table .visitor-data th,
+.inventory-table .visitor-data td {
+    border: 1px solid rgb(196, 196, 196);
+    font-size: 14px;
+    color: #333;
+}
+[class*="col-"] {
+    width: 100%;
+  }
+  
+  .inventory-data > div {
+    flex: 1 1 calc(33.333% - 20px); /* Each block takes up 1/3rd of the row minus gap */
+    min-width: 250px; /* Minimum width for inventory blocks */
+    padding: 15px;
+    border-radius: 8px;
+    background-color: #eef2f5;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    font-size: 16px;
+    color: #333;
+    min-height: 100px;
+    margin-top: 10px;
+}
+
+@media (max-width: 768px) {
+    .inventory-data > div {
+        flex: 1 1 calc(100% - 20px); /* Full width on small screens */
+        min-width: unset; /* Removes minimum width for responsiveness */
+    }
+}
+@media (max-width: 576px){
+
+        .inventory-table{
+            margin: 0;
+        }
+        .inventory-table .visitor-data{
+            max-width: 100px;
+           
+        }
+}

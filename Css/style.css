@@ -1,0 +1,436 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+::after,
+::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+.wrapper {
+    display: flex;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    transition: all 0.35s ease-in-out;
+    min-width: 0;
+}
+
+#sidebar {
+    width: 70px;
+    min-width: 70px;
+    z-index: 1000;
+    transition: all .25s ease-in-out;
+    background: linear-gradient(to top, #84dafb, #7cb0fa, #7cb0fa, #00D2FF);
+    display: flex;
+    position: relative;
+    flex-direction: column;
+}
+
+#sidebar.expand {
+    width: 370px;
+    min-width: 260px;
+}
+
+.sidebar-dropdown a{
+   margin: 10px 5px 5px 10px;
+}
+.d-flex .toggle-btn{
+    position: absolute;
+    right: 0;
+}
+.toggle-btn {
+    background-color: transparent;
+    cursor: pointer;
+    border: 0;
+    display: flex;
+    padding: 1rem 1.5rem;
+    position: absolute;
+}
+.menu-icon{
+    display: none;
+}
+.menu-icon2{
+    display: block;
+}
+
+.toggle-btn i {
+    font-size: 1.5rem;
+    color: #FFF;
+}
+
+.sidebar-logo {
+    width: 100%;
+    min-height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.sidebar-logo img{
+    width: 90px;
+    height: 60px;
+    transition: all;
+    transition-duration: 250ms;
+}
+.sidebar-logo a {
+    color: #FFF;
+    font-size: 1.15rem;
+    font-weight: 600;
+}
+.row .card{
+    background-color: red;
+}
+
+#sidebar:not(.expand) a.sidebar-link span {
+    display: none;
+}
+#sidebar.expand .menu-icon{
+    display: block;
+}
+#sidebar.expand .menu-icon2{
+    display: none;
+}
+#sidebar.expand .sidebar-logo img{
+    width: 280px;
+    height: 210px;
+}
+#sidebar.expand .sidebar-logo,
+#sidebar.expand a.sidebar-link span {
+    animation: fadeIn .25s ease;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.sidebar-nav {
+    padding: 5rem 0;
+    flex: 1 1 auto;
+}
+
+
+a.sidebar-link {
+    padding: .625rem 1.625rem;
+    color: #FFF;
+    display: block;
+    font-size: 0.9rem;
+    text-decoration: none;
+    white-space: nowrap;
+    border-left: 3px solid transparent;
+}
+
+.sidebar-link i,
+.dropdown-item i {
+    font-size: 1.1rem;
+    margin-right: .75rem;
+}
+
+a.sidebar-link:hover {
+    background-color: rgba(255, 255, 255, .075);
+    border-left: 3px solid #3b7ddd;
+}
+
+.sidebar-item {
+    position: relative;
+}
+.sidebar-item span,
+.sidebar-item a,
+.sidebar-item i{
+    font-size: 20px;
+}
+
+#sidebar:not(.expand) .sidebar-item .sidebar-dropdown {
+    position: absolute;
+    top: 0;
+    left: 70px;
+    background-color: #0e2238;
+    padding: 0;
+    min-width: 15rem;
+    display: none;
+}
+
+#sidebar:not(.expand) .sidebar-item:hover .has-dropdown+.sidebar-dropdown {
+    display: block;
+    max-height: 15em;
+    opacity: 1;
+}
+
+#sidebar.expand .sidebar-link[data-bs-toggle="collapse"]::after {
+    border: solid;
+    border-width: 0 .075rem .075rem 0;
+    content: "";
+    display: inline-block;
+    padding: 2px;
+    position: absolute;
+    right: 1.5rem;
+    top: 1.4rem;
+    transform: rotate(-135deg);
+    transition: all .2s ease-out;
+}
+
+#sidebar.expand .sidebar-link[data-bs-toggle="collapse"].collapsed::after {
+    transform: rotate(45deg);
+    transition: all .2s ease-out;
+}
+
+.navbar {
+    background-color: #ffffff;
+    padding: 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: margin-left 0.3s ease;
+    display: flex;
+}
+
+
+.navbar-expand .navbar-collapse {
+    min-width: 300px;
+}
+.navbar-brand {
+    font-size: 1.5rem; /* Default font size for large screens */
+    font-weight: bold;
+    color: #5d5d5d; /* Blue color for branding */
+    text-transform: uppercase; /* Uppercase for emphasis */
+    letter-spacing: 1px; /* Adds spacing between letters */
+    white-space: nowrap; /* Prevents breaking into multiple lines */
+    letter-spacing: 5px;
+}
+
+  .navbar-brand:hover {
+    color: #0056b3; /* Darker blue on hover */
+    text-decoration: none; /* No underline */
+  }
+
+
+  .profile-dropdown {
+    position: relative;
+}
+
+.profile-dropdown-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px; /* Space between avatar and icon */
+    cursor: pointer;
+}
+
+.profile-dropdown-btn img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #ddd;
+    transition: border-color 0.3s ease;
+}
+
+.profile-dropdown-btn img:hover {
+    border-color: #007bff;
+}
+
+.profile-dropdown-btn i {
+    font-size: 18px;
+    color: #555;
+    transition: transform 0.3s ease;
+}
+
+/* Rotate the chevron when dropdown is active */
+.profile-dropdown-btn.active i {
+    transform: rotate(180deg);
+}
+
+/* Dropdown Menu Styling */
+.dropdown-menu {
+    position: absolute;
+    top: 50px;
+    right: 0;
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    min-width: 200px;
+    padding: 10px;
+    z-index: 1000;
+    display: none; /* Hidden by default */
+}
+
+.dropdown-menu a {
+    display: block;
+    padding: 10px;
+    color: #333;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: background-color 0.3s ease;
+}
+
+.dropdown-menu a:hover {
+    background-color: #f0f0f0;
+}
+
+/* Show dropdown menu when active */
+.dropdown-menu.show {
+    display: block;
+}
+  .icon-container {
+    position: relative; /* Enable absolute positioning for badges */
+    display: inline-block; /* Keep icons inline */
+    font-size: 15px; /* Default icon size */
+    color: #333; /* Default icon color */
+    text-decoration: none; /* Remove underline */
+    margin-right: 15px; /* Space between icons */
+}
+
+.icon-container a {
+    text-decoration: none; /* No underline for the links */
+    color: inherit; /* Inherit container's color */
+    font-size: 25px;
+}
+
+.icon-container i {
+    font-size: inherit; /* Icon inherits size from container */
+    position: relative; /* Base position for badges */
+}
+
+/* Badge for user check icon */
+.icon-container .badge, 
+.icon-container .notify {
+    position: absolute; /* Place on top of icon */
+    top: -8px; /* Adjust vertical position */
+    right: -8px; /* Adjust horizontal position */
+    background-color: #ff5050; /* Red badge background */
+    color: #fff; /* White badge text */
+    font-size: 12px; /* Font size for badge */
+    font-weight: bold; /* Bold text */
+    padding: 2px 6px; /* Padding inside badge */
+    border-radius: 50%; /* Make the badge circular */
+    min-width: 20px; /* Minimum width for badge */
+    min-height: 20px; /* Minimum height for badge */
+    display: flex; /* Center text */
+    align-items: center; /* Vertically center text */
+    justify-content: center; /* Horizontally center text */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+}
+
+/* Hover effect */
+.icon-container:hover i {
+    color: #ff0000; /* Change icon color on hover */
+}
+
+.notify {
+    background-color: red;
+    color: white;
+    font-size: 8px;
+    padding: 2px 6px;
+    border-radius: 50%;
+    position: absolute;
+    top: -5px;
+    right: -10px;
+    font-weight: bold;
+}
+
+/* Notification popup styling */
+.notification-popup {
+    display: none; /* Hidden by default */
+    position: absolute;
+    top: 30px;
+    right: 0;
+    background-color: white;
+    color: black;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    z-index: 100;
+}
+
+/* Unordered list inside the popup */
+.notification-popup ul {
+    list-style: none;
+    margin: 0;
+    padding: 10px;
+}
+
+.notification-popup ul li {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.notification-popup ul li:last-child {
+    border-bottom: none;
+}
+
+.notification-popup ul li:hover {
+    background-color: #f5f5f5;
+}
+
+/* Show popup when the parent container is hovered */
+.icon-container:hover .notification-popup {
+    display: block;
+}
+  @media (max-width: 768px) {
+    .navbar-brand {
+      font-size: 1rem; /* Smaller font size for medium/small screens */
+      text-align: center; /* Centers text on smaller screens */
+      flex-grow: 1; /* Allows text to occupy available space */
+    }
+
+    .avatar {
+      width: 35px; /* Smaller avatar size */
+      height: 35px;
+    }
+  }
+  .profile-dropdown-btn {
+    font-size: 14px; /* Smaller font size on smaller screens */
+}
+
+.profile-dropdown-btn img {
+    width: 50px; /* Smaller avatar size */
+    height: 50px;
+}
+
+.nav-icon .dropdown-menu {
+    min-width: 150px; /* Smaller dropdown width */
+}
+
+  @media (max-width: 576px) {
+
+    .navbar-brand {
+        font-size: 1rem; /* Reduce font size on small screens */
+    }
+
+    i.fa-solid {
+        font-size: 1.2rem; /* Adjust icon size for better fit */
+    }
+    .icon-container {
+        font-size: 20px; /* Reduce icon size on small screens */
+        margin-right: 10px; /* Less space between icons */
+    }
+
+    .icon-container .badge, 
+    .icon-container .notify {
+        font-size: 10px; /* Reduce badge size */
+        top: -6px; /* Adjust position for smaller size */
+        right: -6px;
+        min-width: 16px; /* Smaller badge width */
+        min-height: 16px; /* Smaller badge height */
+    }
+}

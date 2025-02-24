@@ -1,0 +1,74 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+  }
+  
+  .form-container {
+    width: 400px;
+    background: linear-gradient(to bottom, #a3d9f5, #caebf2);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .form-container .logo img {
+    display: block;
+    margin: 0 auto 20px;
+    width: 120px;
+  }
+  
+  .visitor-form label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  .visitor-form input {
+    width: calc(100% - 20px);
+    margin-bottom: 15px;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .visitor-form input:focus {
+    border-color: #56b4ef;
+    outline: none;
+  }
+  
+  .buttons {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .confirm-button, .back-button {
+    width: 48%;
+    padding: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .confirm-button {
+    background-color: #007bff;
+    color: white;
+  }
+  
+  .back-button {
+    background-color: #e0e0e0;
+    color: black;
+  }
+  
+  .confirm-button:hover {
+    background-color: #0056b3;
+  }
+  
+  .back-button:hover {
+    background-color: #cccccc;
+  }
+  

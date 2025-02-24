@@ -1,0 +1,74 @@
+.qr-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full viewport height */
+    background-color: #f8f9fa; /* Light gray background */
+    padding: 20px;
+}
+
+.form-qrcode {
+    background-color: #ffffff; /* White background */
+    border: 1px solid #ddd; /* Light border */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    padding: 20px; /* Inner padding */
+    max-width: 400px; /* Max width */
+    width: 100%; /* Full width for smaller devices */
+}
+
+.form-qrcode form {
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+}
+
+.form-qrcode label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    font-size: 14px;
+    color: #333;
+}
+
+.form-qrcode input[type="text"] {
+    width: 100%; /* Full width */
+    padding: 10px;
+    margin-bottom: 15px; /* Spacing between fields */
+    border: 1px solid #ccc; /* Border */
+    border-radius: 4px; /* Rounded corners */
+    box-sizing: border-box; /* Include padding in width calculation */
+    font-size: 14px; /* Text size */
+}
+
+.form-qrcode input[type="submit"] {
+    background-color: #007bff; /* Bootstrap blue */
+    color: white; /* White text */
+    border: none; /* Remove border */
+    padding: 10px;
+    border-radius: 4px;
+    font-size: 14px;
+    cursor: pointer; /* Pointer on hover */
+    transition: background-color 0.3s ease; /* Smooth hover effect */
+}
+
+.form-qrcode input[type="submit"]:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+@media (max-width: 576px) {
+    .form-qrcode {
+        padding: 15px; /* Reduce padding on small screens */
+    }
+
+    .form-qrcode label {
+        font-size: 12px; /* Smaller font size for labels */
+    }
+
+    .form-qrcode input[type="text"] {
+        font-size: 12px; /* Smaller input font size */
+    }
+
+    .form-qrcode input[type="submit"] {
+        font-size: 12px; /* Smaller button font size */
+        padding: 8px; /* Reduce button padding */
+    }
+}
